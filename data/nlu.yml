@@ -1,0 +1,81 @@
+version: "3.1"
+
+nlu:
+- intent: salutation
+  examples: |
+    - Bonjour
+    - Salut
+    - Coucou
+    - Bonsoir
+
+- intent: aurevoir
+  examples: |
+    - Au revoir
+    - Adieu
+    - Bonne soirée
+    - Bonne journée
+    - À plus tard
+
+- intent: resaRestoDebut
+  examples: |
+    - Je voudrais réserver une table
+    - Je voudrais venir manger chez vous
+    - Est-ce que vous avez de la place ?
+    
+
+- intent: resaRestoNom
+  examples: |
+    - Au nom de [Pierre](name)
+    - [Paul](name)
+    - [Jacques Dupont](name)
+    - [Marie](name)
+    - [Olivier](name)
+    - [Sarah](name)
+    - [Laura](name)
+    - [Jean](name)
+    - [Martin](name)
+    - [Théo](name)
+    - [Yves](name)
+    - [Isabelle](name)
+
+- intent: resaRestoJours
+  examples: |
+    - 01/01/2024(day)
+    - 04/02/2024(day)
+    - 07/03/2024(day)
+    - 10/04/2024(day)
+    - 13/05/2024(day)
+    - 16/06/2024(day)
+    - 19/07/2024(day)
+    - 22/08/2025(day)
+    - 25/09/2025(day)
+    - 28/10/2025(day)
+    - 30/11/2025(day)
+    - 31/12/2025(day)
+
+- intent: resaRestoHeure
+  examples: |
+    - 17:05(hour)
+    - 17:10(hour)
+    - 18:15(hour)
+    - 18:20(hour)
+    - 19:25(hour)
+    - 19:50(hour)
+    - 20:30(hour)
+    - 20:45(hour)
+    - 21:35(hour)
+    - 21:40(hour)
+    - 22:40(hour)
+
+- intent: resaRestoNombre
+  examples: |
+    - 1(nbGuests)
+    - 2(nbGuests)
+    - 3(nbGuests)
+    - 4(nbGuests)
+    - 5(nbGuests)
+    - 6(nbGuests)
+    - 7(nbGuests)
+    - 8(nbGuests)
+    - 9(nbGuests)
+    - 10(nbGuests)

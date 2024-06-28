@@ -1,0 +1,67 @@
+version: "3.1"
+
+intents:
+  - salutation
+  - aurevoir
+  - resaRestoDebut
+  - resaRestoNom
+  - resaRestoJours
+  - resaRestoHeure
+  - resaRestoNombre
+
+entities:
+  - name
+  - day
+  - hour
+  - nbGuests
+
+slots:
+  nom:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+  jour:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: day
+  heure:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: hour
+  nombre:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: nbGuests
+
+responses:
+  utter_salutation:
+  - text: "Bonjour, que puis-je pour vous ?"
+
+  utter_aurevoir:
+  - text: "J'espère que cette interaction vous a plu"
+
+  utter_resa_nom:
+  - text: "Début d'une réservation de restaurant. Ce sera à quel nom ?"
+
+  utter_resa_jour:
+  - text: "C'est pour quel jour ? JJ/MM/AAAA"
+
+  utter_resa_heure:
+  - text: "C'est pour quelle heure ? HH:MM"
+
+  utter_resa_nombre:
+  - text: "C'est pour combien de convives ?"
+
+  utter_ack:
+  - text: "C'est noté"
+
+  utter_resa_resume:
+  - text: "Votre réservation est enregistrée sous le code {nom}{jour}{heure}"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
